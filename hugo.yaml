@@ -1,0 +1,61 @@
+baseURL: "https://yogendraom.github.io/"
+languageCode: en-us
+title: "Yogendra Om"
+theme: ["github.com/adityatelange/hugo-PaperMod"]
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+params:
+  env: production
+  description: "Notes on ideas, learning, and building."
+  author: "Yogendra Om"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  homeInfoParams:
+    Title: "Ideas worth keeping."
+    Content: >-
+      A personal blog about ideas, learning, and the things I’m building.
+      Slow thoughts, useful notes, and new perspectives—written to be read.
+  socialIcons:
+    - name: github
+      url: "https://github.com/yogendraom"
+  assets:
+    disableHLJS: true
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  tag: tags
+  category: categories
+
+minify:
+  minifyOutput: true
